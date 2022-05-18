@@ -12,7 +12,7 @@ var bot *discordgo.Session
 
 
 func main() {
-        token := ""
+        token := "<discord-token>"
         bot, err := discordgo.New("Bot " + token)
 
         if err != nil {
